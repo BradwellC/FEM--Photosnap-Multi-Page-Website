@@ -1,0 +1,673 @@
+@font-face {
+  font-family: 'DM Sans Bold';
+  font-weight: 700;
+  src: url('../fonts/DMSans-Bold.woff2') format('woff2'),
+    url('../fonts/DMSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DM Sans Regular';
+  font-weight: 500;
+  src: url('../fonts/DMSans-Regular.woff2') format('woff2'),
+    url('../fonts/DMSans-Regular.woff') format('woff');
+}
+
+/* Font Face END */
+
+:root {
+  --clr-primary-100: #fff;
+  --clr-primary-200: #dfdfdf;
+  --clr-primary-300: #000;
+
+  --clr-secondary-100: rgb(255, 197, 147);
+  --clr-secondary-200: rgb(188, 113, 152);
+  --clr-secondary-300: rgb(90, 119, 255);
+
+  --clr-gradient-1: linear-gradient(
+    to right,
+    var(--clr-secondary-100),
+    var(--clr-secondary-200),
+    var(--clr-secondary-300)
+  );
+
+  --ff-main: 'DM Sans Bold', sans-serif;
+  --ff-secondary: 'DM Sans Regular', sans-serif;
+}
+
+/* ROOT END */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-secondary);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Reset CSS END */
+
+.h1 {
+  font-family: var(--ff-main);
+  font-size: 40px;
+
+  line-height: 48px;
+  letter-spacing: 4.17px;
+
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: var(--ff-main);
+  font-size: 24px;
+
+  line-height: 25px;
+}
+
+.h3 {
+  font-family: var(--ff-main);
+  font-size: 18px;
+
+  line-height: 25px;
+}
+
+.h4 {
+  font-family: var(--ff-main);
+  font-size: 12px;
+
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+
+.body {
+  font-size: 15px;
+
+  line-height: 25px;
+}
+
+.arrows {
+  width: 42px;
+  height: 12px;
+
+  filter: brightness(0) saturate(100%) invert(100%) sepia(18%) saturate(429%)
+    hue-rotate(161deg) brightness(113%) contrast(115%);
+}
+
+.arrows-dark {
+  width: 42px;
+  height: 12px;
+}
+
+.btn-dark {
+  font-family: var(--ff-main);
+  font-size: 12px;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  display: flex;
+  align-items: center;
+
+  width: 205px;
+}
+
+/* Generic END */
+
+header {
+  width: 100%;
+  height: 72px;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-around;
+  align-items: center;
+
+  margin-inline: auto;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+  width: 269px;
+}
+
+/* Header END */
+
+.section-1 {
+  width: 100%;
+  height: 650px;
+
+  display: flex;
+}
+
+.section-1__left {
+  width: 610px;
+  height: 100%;
+
+  background-color: black;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+}
+
+.section-1__left::before {
+  content: '';
+
+  position: absolute;
+  width: 6px;
+  height: 304px;
+
+  top: 27%;
+  left: 0;
+
+  background-image: var(--clr-gradient-1);
+}
+
+.section-1__content {
+  width: 387px;
+  height: 304px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.section-1__left .h1 {
+  color: var(--clr-primary-100);
+}
+
+.section-1__left .body {
+  color: var(--clr-primary-100);
+}
+
+.section-1__right img {
+  content: url('../img/home/desktop/create-and-share.jpg');
+
+  width: 830px;
+  height: 650px;
+}
+
+/* Section 1 END */
+
+.section-2 {
+  width: 100%;
+  height: 650px;
+
+  display: flex;
+}
+
+.section-2__left {
+  content: url('../img/home/desktop/beautiful-stories.jpg');
+
+  width: 830px;
+}
+
+.section-2__right {
+  width: 610px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-2__content {
+  width: 387px;
+  height: 329px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+/* Section 2 END */
+
+.section-3 {
+  width: 100%;
+  height: 650px;
+
+  display: flex;
+}
+
+.section-3__left {
+  width: 610px;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-3__content {
+  width: 387px;
+  height: 329px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.section-3__right img {
+  content: url('../img/home/desktop/designed-for-everyone.jpg');
+
+  width: 830px;
+  height: 650px;
+}
+
+/* Section 3 END */
+
+.section-4 {
+  width: 100%;
+  margin-inline: auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-1 {
+  background-color: none;
+  border: none;
+
+  background-image: url('../img/stories/desktop/mountains.jpg');
+
+  width: 360px;
+  height: 500px;
+
+  position: relative;
+
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.grid-2 {
+  background-color: none;
+  border: none;
+
+  background-image: url('../img/stories/desktop/cityscapes.jpg');
+
+  width: 360px;
+  height: 500px;
+
+  position: relative;
+
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.grid-3 {
+  background-color: none;
+  border: none;
+
+  background-image: url('../img/stories/desktop/18-days-voyage.jpg');
+
+  width: 360px;
+  height: 500px;
+
+  position: relative;
+
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.grid-4 {
+  background-color: none;
+  border: none;
+
+  background-image: url('../img/stories/desktop/architecturals.jpg');
+
+  width: 360px;
+  height: 500px;
+
+  position: relative;
+
+  cursor: pointer;
+  transition: all ease 0.4s;
+}
+
+.grid-1::before,
+.grid-2::before,
+.grid-3::before,
+.grid-4::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.66)
+  );
+  z-index: 1;
+}
+
+.grid-1:hover,
+.grid-2:hover,
+.grid-3:hover,
+.grid-4:hover {
+  transform: translateY(-25px);
+}
+
+.grid-1:hover:after,
+.grid-2:hover:after,
+.grid-3:hover:after,
+.grid-4:hover:after {
+  position: absolute;
+  content: '';
+
+  background-image: linear-gradient(
+    to top right,
+    var(--clr-secondary-100),
+    var(--clr-secondary-200),
+    var(--clr-secondary-300)
+  );
+  height: 6px;
+  width: 360px;
+
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.grid-content {
+  position: absolute;
+
+  bottom: 30px;
+  left: 35px;
+
+  width: 280px;
+
+  margin-top: auto;
+
+  text-align: left;
+  color: var(--clr-primary-100);
+
+  z-index: 10;
+}
+
+.grid-text {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.grid-btn {
+  width: 280px;
+
+  display: flex;
+  justify-content: space-between;
+
+  padding-top: 17px;
+}
+
+/* Section 4 END */
+
+.section-5 {
+  display: grid;
+  grid-template-columns: repeat(3, 350px);
+
+  column-gap: 30px;
+  width: 1110px;
+
+  margin: 13rem auto;
+}
+
+.grid-5,
+.grid-6,
+.grid-7 {
+  width: 350px;
+  height: 218px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  align-items: center;
+  text-align: center;
+}
+
+.grid-5 img,
+.grid-7 img {
+  width: 72px;
+  height: 72px;
+}
+
+.grid-6 img {
+  width: 72px;
+  height: 36px;
+}
+
+/* Section 5 END */
+
+footer {
+  width: 100%;
+  height: 250px;
+
+  background-color: var(--clr-primary-300);
+  color: var(--clr-primary-100);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 1104px;
+  height: 122px;
+
+  margin-inline: auto;
+  padding-top: 4rem;
+}
+
+.footer-left {
+  display: flex;
+
+  column-gap: 60px;
+}
+
+.img-socials {
+  display: flex;
+  flex-direction: column;
+
+  height: 122px;
+
+  justify-content: space-between;
+}
+
+.socials img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7489%)
+    hue-rotate(45deg) brightness(97%) contrast(97%);
+
+  cursor: pointer;
+}
+
+.img-socials img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7489%)
+    hue-rotate(45deg) brightness(97%) contrast(97%);
+}
+
+.socials img:hover {
+  filter: none;
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 154px;
+}
+
+.footer-nav ul {
+  width: 250px;
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+}
+
+.footer-nav ul li a {
+  color: var(--clr-primary-100);
+
+  font-family: var(--ff-main);
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+.footer-nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.link-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  height: 122px;
+}
+
+.link-copyright a {
+  font-size: 12px;
+  font-family: var(--ff-main);
+
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 168px;
+  color: var(--clr-primary-100);
+}
+
+.link-copyright a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 15px;
+  font-family: var(--ff-secondary);
+}
+
+/* Media CSS START */
+
+@media screen and (min-width: 1443px) {
+  .section-1__left {
+    width: 1110px;
+  }
+
+  .section-2__right {
+    width: 1110px;
+  }
+
+  .section-3__left {
+    width: 1110px;
+  }
+
+  .section-4 {
+    width: 1110px;
+  }
+}
+
+/* Media CSS END */
