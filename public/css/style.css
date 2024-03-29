@@ -190,10 +190,54 @@ a {
   letter-spacing: 2px;
   text-transform: uppercase;
 
+  color: var(--clr-primary-300);
+}
+
+.btn-dark:hover {
+  border-bottom: 1px solid var(--clr-primary-300);
+}
+
+.btn-light {
+  font-family: var(--ff-main);
+  font-size: 12px;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  color: var(--clr-primary-100);
+}
+
+.btn-light:hover {
+  border-bottom: 1px solid var(--clr-primary-100);
+}
+
+.section-links {
+  width: 205px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: var(--clr-primary-300);
+  color: var(--clr-primary-100);
+
+  padding: 10px 23px;
+
   display: flex;
   align-items: center;
+  justify-content: center;
 
-  width: 205px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  transition: all ease 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #dfdfdf;
+  color: var(--clr-primary-300);
 }
 
 /* Generic END */
@@ -218,6 +262,21 @@ header {
   justify-content: space-between;
 
   width: 269px;
+}
+
+.navbar ul li a {
+  font-size: 12px;
+  font-family: var(--ff-main);
+
+  letter-spacing: 2px;
+  color: var(--clr-primary-300);
+
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: rgba(0, 0, 0, 0.3);
 }
 
 /* Header END */
@@ -623,6 +682,16 @@ footer {
   height: 122px;
 }
 
+.link-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  justify-content: space-between;
+
+  width: 168px;
+}
+
 .link-copyright a {
   font-size: 12px;
   font-family: var(--ff-main);
@@ -630,12 +699,6 @@ footer {
   text-transform: uppercase;
   letter-spacing: 2px;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-
-  width: 168px;
   color: var(--clr-primary-100);
 }
 
@@ -652,7 +715,7 @@ footer {
 
 /* Media CSS START */
 
-@media screen and (min-width: 1443px) {
+@media screen and (min-width: 1550px) {
   .section-1__left {
     width: 1110px;
   }
@@ -666,7 +729,7 @@ footer {
   }
 
   .section-4 {
-    width: 1110px;
+    width: 1440px;
   }
 }
 

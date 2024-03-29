@@ -1,0 +1,353 @@
+@font-face {
+  font-family: "DM Sans Bold";
+  font-weight: 700;
+  src: url("../fonts/DMSans-Bold.woff2") format("woff2"), url("../fonts/DMSans-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "DM Sans Regular";
+  font-weight: 500;
+  src: url("../fonts/DMSans-Regular.woff2") format("woff2"), url("../fonts/DMSans-Regular.woff") format("woff");
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "DM Sans Regular", sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 72px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-inline: auto;
+}
+
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 269px;
+}
+
+.navbar ul li a {
+  font-size: 12px;
+  font-family: "DM Sans Bold", sans-serif;
+  letter-spacing: 2px;
+  color: #000;
+  text-transform: uppercase;
+  transition: all ease 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+footer {
+  width: 100%;
+  height: 250px;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1104px;
+  height: 122px;
+  margin-inline: auto;
+  padding-top: 4rem;
+}
+
+.footer-left {
+  display: flex;
+  column-gap: 60px;
+}
+
+.img-socials {
+  display: flex;
+  flex-direction: column;
+  height: 122px;
+  justify-content: space-between;
+}
+.img-socials img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7489%) hue-rotate(45deg) brightness(97%) contrast(97%);
+}
+
+.socials {
+  display: flex;
+  justify-content: space-between;
+  width: 154px;
+}
+.socials img {
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7489%) hue-rotate(45deg) brightness(97%) contrast(97%);
+  cursor: pointer;
+}
+.socials img:hover {
+  filter: none;
+}
+
+.footer-nav ul {
+  width: 250px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footer-nav ul li a {
+  color: #fff;
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.footer-nav ul li a:hover {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.link-copyright {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 122px;
+}
+
+.link-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 168px;
+}
+
+.link-copyright a {
+  font-size: 12px;
+  font-family: "DM Sans Bold", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+.link-copyright a:hover {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.copyright {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 15px;
+  font-family: "DM Sans Regular", sans-serif;
+}
+
+.grid-container__4 {
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: relative;
+}
+
+.grid-container__full {
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  position: relative;
+}
+
+.grid {
+  background-color: none;
+  border: none;
+  width: 360px;
+  height: 500px;
+  position: relative;
+  cursor: pointer;
+  transition: all ease 0.2s;
+}
+
+.grid::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.66), rgba(0, 0, 0, 0.2));
+  z-index: 1;
+}
+
+.grid:hover {
+  transform: translateY(-25px);
+}
+
+.grid:hover:after {
+  position: absolute;
+  content: "";
+  background-image: linear-gradient(to top right, var(--clr-secondary-100), var(--clr-secondary-200), var(--clr-secondary-300));
+  height: 6px;
+  width: 360px;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+}
+
+.grid-content {
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+  width: 280px;
+  margin-top: auto;
+  text-align: left;
+  color: var(--clr-primary-100);
+  z-index: 10;
+}
+
+.grid-text {
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.grid-btn {
+  width: 280px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 17px;
+}
+
+.three-columns {
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+  width: 1110px;
+  margin: 13rem auto;
+}
+
+.column {
+  width: 350px;
+  height: 218px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.btn-dark {
+  font-family: var(--ff-main);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--clr-primary-300);
+}
+
+.btn-dark:hover {
+  border-bottom: 1px solid var(--clr-primary-300);
+}
+
+.btn-light {
+  font-family: var(--ff-main);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--clr-primary-100);
+}
+
+.btn-light:hover {
+  border-bottom: 1px solid var(--clr-primary-100);
+}
+
+.section-links {
+  width: 205px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: var(--clr-primary-300);
+  color: var(--clr-primary-100);
+  padding: 10px 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all ease 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #dfdfdf;
+  color: var(--clr-primary-300);
+}
