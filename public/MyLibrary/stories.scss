@@ -3,8 +3,31 @@
 @import './resets';
 @import './partials';
 
+@import './generic';
+
 @import './layouts';
 @import './buttons';
+
+.main-story {
+  width: 1440px;
+  height: 650px;
+
+  background-image: url('../img/stories/desktop/moon-of-appalacia.jpg');
+}
+
+.main-story__content {
+  color: $clr-primary-100;
+
+  width: 387px;
+}
+
+.last-feature {
+  font-size: 12px;
+  font-family: $ff-main;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 
 .grid-1 {
   background-image: url('../img/stories/desktop/mountains.jpg');

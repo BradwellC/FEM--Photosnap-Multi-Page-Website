@@ -210,6 +210,43 @@ footer {
   font-family: "DM Sans Regular", sans-serif;
 }
 
+.h1 {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.17px;
+  text-transform: uppercase;
+}
+
+.h3 {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.h4 {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+
+.body {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.arrows {
+  width: 42px;
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(18%) saturate(429%) hue-rotate(161deg) brightness(113%) contrast(115%);
+}
+
+.arrows-dark {
+  width: 42px;
+  height: 12px;
+}
+
 .grid-container__4 {
   width: 100%;
   margin-inline: auto;
@@ -305,27 +342,27 @@ footer {
 }
 
 .btn-dark {
-  font-family: var(--ff-main);
+  font-family: "DM Sans Bold", sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--clr-primary-300);
+  color: #000;
 }
 
 .btn-dark:hover {
-  border-bottom: 1px solid var(--clr-primary-300);
+  border-bottom: 1px solid #000;
 }
 
 .btn-light {
-  font-family: var(--ff-main);
+  font-family: "DM Sans Bold", sans-serif;
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--clr-primary-100);
+  color: #fff;
 }
 
 .btn-light:hover {
-  border-bottom: 1px solid var(--clr-primary-100);
+  border-bottom: 1px solid #fff;
 }
 
 .section-links {
@@ -336,8 +373,8 @@ footer {
 }
 
 .btn-primary {
-  background-color: var(--clr-primary-300);
-  color: var(--clr-primary-100);
+  background-color: #000;
+  color: #fff;
   padding: 10px 23px;
   display: flex;
   align-items: center;
@@ -349,7 +386,25 @@ footer {
 
 .btn-primary:hover {
   background-color: #dfdfdf;
-  color: var(--clr-primary-300);
+  color: #000;
+}
+
+.main-story {
+  width: 1440px;
+  height: 650px;
+  background-image: url("../img/stories/desktop/moon-of-appalacia.jpg");
+}
+
+.main-story__content {
+  color: #fff;
+  width: 387px;
+}
+
+.last-feature {
+  font-size: 12px;
+  font-family: "DM Sans Bold", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 .grid-1 {

@@ -1,29 +1,29 @@
 .btn-dark {
-  font-family: var(--ff-main);
+  font-family: $ff-main;
   font-size: 12px;
 
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  color: var(--clr-primary-300);
+  color: $clr-primary-300;
 }
 
 .btn-dark:hover {
-  border-bottom: 1px solid var(--clr-primary-300);
+  border-bottom: 1px solid $clr-primary-300;
 }
 
 .btn-light {
-  font-family: var(--ff-main);
+  font-family: $ff-main;
   font-size: 12px;
 
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  color: var(--clr-primary-100);
+  color: $clr-primary-100;
 }
 
 .btn-light:hover {
-  border-bottom: 1px solid var(--clr-primary-100);
+  border-bottom: 1px solid $clr-primary-100;
 }
 
 .section-links {
@@ -35,8 +35,8 @@
 }
 
 .btn-primary {
-  background-color: var(--clr-primary-300);
-  color: var(--clr-primary-100);
+  background-color: $clr-primary-300;
+  color: $clr-primary-100;
 
   padding: 10px 23px;
 
@@ -52,5 +52,5 @@
 
 .btn-primary:hover {
   background-color: #dfdfdf;
-  color: var(--clr-primary-300);
+  color: $clr-primary-300;
 }
