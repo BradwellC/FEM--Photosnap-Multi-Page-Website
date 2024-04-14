@@ -1,0 +1,40 @@
+.main-heading {
+  display: flex;
+  position: relative;
+}
+
+.main-heading__left {
+  width: 610px;
+  height: 490px;
+
+  background-color: $clr-primary-300;
+
+  padding: 12rem 6rem 0;
+}
+
+.main-heading__content {
+  width: 367px;
+  height: 144px;
+}
+
+.main-heading__content h2 {
+  padding-bottom: 21px;
+  color: $clr-primary-100;
+}
+
+.main-heading__content p {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.main-heading__content::before {
+  background-image: $clr-gradient-1;
+  width: 6px;
+  height: 144px;
+
+  position: absolute;
+  bottom: 9.2rem;
+  left: 0;
+
+  z-index: 20;
+  content: '';
+}

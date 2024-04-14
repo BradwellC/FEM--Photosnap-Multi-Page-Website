@@ -17,13 +17,22 @@
 /* Remove default margin */
 body,
 h1,
+h2,
 h3,
 h4,
-p {
+p,
+figure,
+blockquote,
+dl,
+dd {
   margin: 0;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
 
 /* Set core root defaults */
 html:focus-within {
@@ -43,12 +52,19 @@ a:not([class]) {
 }
 
 /* Make images easier to work with */
-img {
+img,
+picture {
   max-width: 100%;
   display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
@@ -74,6 +90,9 @@ img {
 
 body {
   font-family: "DM Sans Regular", sans-serif;
+  width: 100%;
+  max-width: 1440px;
+  margin-inline: auto;
 }
 
 ul {
@@ -82,6 +101,135 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+.h1 {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.17px;
+  text-transform: uppercase;
+}
+
+.h2 {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 24px;
+  line-height: 25px;
+}
+
+.h3 {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.h4 {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 2px;
+}
+
+.body {
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.arrows {
+  width: 42px;
+  height: 12px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(18%) saturate(429%) hue-rotate(161deg) brightness(113%) contrast(115%);
+}
+
+.arrows-dark {
+  width: 42px;
+  height: 12px;
+}
+
+.btn-dark {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.btn-dark:hover {
+  border-bottom: 1px solid #000;
+}
+
+.btn-light {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.btn-light:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.section-links {
+  width: 205px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-primary {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: all ease 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #dfdfdf;
+  color: #000;
+}
+
+.btn {
+  background-color: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all ease 0.3s;
+  font-size: 12px;
+  font-family: "DM Sans Bold", sans-serif;
+  letter-spacing: 2px;
+}
+
+.btn-black {
+  background-color: #000;
+  color: #fff;
+  width: 270px;
+  height: 40px;
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #000;
+  width: 270px;
+  height: 40px;
+}
+
+.btn-black:hover {
+  background-color: #dfdfdf;
+  color: #000;
+}
+
+.btn-white:hover {
+  background-color: #dfdfdf;
+  color: #000;
 }
 
 header {
@@ -210,41 +358,67 @@ footer {
   font-family: "DM Sans Regular", sans-serif;
 }
 
-.h1 {
-  font-family: "DM Sans Bold", sans-serif;
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: 4.17px;
-  text-transform: uppercase;
+.main-heading {
+  display: flex;
+  position: relative;
 }
 
-.h3 {
-  font-family: "DM Sans Bold", sans-serif;
-  font-size: 18px;
-  line-height: 25px;
+.main-heading__left {
+  width: 610px;
+  height: 490px;
+  background-color: #000;
+  padding: 12rem 6rem 0;
 }
 
-.h4 {
-  font-family: "DM Sans Bold", sans-serif;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 2px;
+.main-heading__content {
+  width: 367px;
+  height: 144px;
 }
 
-.body {
-  font-size: 15px;
-  line-height: 25px;
+.main-heading__content h2 {
+  padding-bottom: 21px;
+  color: #fff;
 }
 
-.arrows {
-  width: 42px;
-  height: 12px;
-  filter: brightness(0) saturate(100%) invert(100%) sepia(18%) saturate(429%) hue-rotate(161deg) brightness(113%) contrast(115%);
+.main-heading__content p {
+  color: rgba(255, 255, 255, 0.6);
 }
 
-.arrows-dark {
-  width: 42px;
-  height: 12px;
+.main-heading__content::before {
+  background-image: linear-gradient(to top right, rgb(255, 197, 147), rgb(188, 113, 152), rgb(90, 119, 255));
+  width: 6px;
+  height: 144px;
+  position: absolute;
+  bottom: 9.2rem;
+  left: 0;
+  z-index: 20;
+  content: "";
+}
+
+.invite {
+  background-image: url("../img/shared/desktop/bg-beta.jpg");
+  height: 280px;
+}
+
+.invite-container {
+  width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  padding-top: 4rem;
+}
+
+.invite-container h2 {
+  width: 400px;
+  color: #fff;
+}
+
+.invite-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 168px;
 }
 
 .grid-container__4 {
@@ -292,12 +466,12 @@ footer {
 .grid:hover:after {
   position: absolute;
   content: "";
-  background-image: linear-gradient(to top right, var(--clr-secondary-100), var(--clr-secondary-200), var(--clr-secondary-300));
+  background-image: linear-gradient(to top right, rgb(255, 197, 147), rgb(188, 113, 152), rgb(90, 119, 255));
   height: 6px;
   width: 360px;
   bottom: 0;
   left: 0;
-  z-index: 20;
+  z-index: 100;
 }
 
 .grid-content {
@@ -307,7 +481,7 @@ footer {
   width: 280px;
   margin-top: auto;
   text-align: left;
-  color: var(--clr-primary-100);
+  color: #fff;
   z-index: 10;
 }
 
@@ -341,54 +515,6 @@ footer {
   text-align: center;
 }
 
-.btn-dark {
-  font-family: "DM Sans Bold", sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #000;
-}
-
-.btn-dark:hover {
-  border-bottom: 1px solid #000;
-}
-
-.btn-light {
-  font-family: "DM Sans Bold", sans-serif;
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #fff;
-}
-
-.btn-light:hover {
-  border-bottom: 1px solid #fff;
-}
-
-.section-links {
-  width: 205px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.btn-primary {
-  background-color: #000;
-  color: #fff;
-  padding: 10px 23px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  transition: all ease 0.3s;
-}
-
-.btn-primary:hover {
-  background-color: #dfdfdf;
-  color: #000;
-}
-
 .section-1 {
   width: 100%;
   height: 650px;
@@ -398,7 +524,7 @@ footer {
 .section-1__left {
   width: 610px;
   height: 100%;
-  background-color: black;
+  background-color: #000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -407,12 +533,12 @@ footer {
 
 .section-1__left::before {
   content: "";
+  background-image: linear-gradient(to top right, rgb(255, 197, 147), rgb(188, 113, 152), rgb(90, 119, 255));
   position: absolute;
   width: 6px;
   height: 304px;
   top: 27%;
   left: 0;
-  background-image: var(--clr-gradient-1);
 }
 
 .section-1__content {
@@ -424,15 +550,14 @@ footer {
 }
 
 .section-1__left .h1 {
-  color: var(--clr-primary-100);
+  color: #fff;
 }
 
 .section-1__left .body {
-  color: var(--clr-primary-100);
+  color: #fff;
 }
 
 .section-1__right img {
-  content: url("../img/home/desktop/create-and-share.jpg");
   width: 830px;
   height: 650px;
 }
@@ -444,9 +569,9 @@ footer {
   display: flex;
 }
 
-.section-2__left {
-  content: url("../img/home/desktop/beautiful-stories.jpg");
+.section-2__left img {
   width: 830px;
+  height: 650px;
 }
 
 .section-2__right {
@@ -489,9 +614,296 @@ footer {
 }
 
 .section-3__right img {
-  content: url("../img/home/desktop/designed-for-everyone.jpg");
   width: 830px;
   height: 650px;
+}
+
+.story-1 {
+  background-image: url("../img/stories/desktop/mountains.jpg");
+  color: #fff;
+}
+
+.story-2 {
+  background-image: url("../img/stories/desktop/cityscapes.jpg");
+  color: #fff;
+}
+
+.story-3 {
+  background-image: url("../img/stories/desktop/18-days-voyage.jpg");
+  color: #fff;
+}
+
+.story-4 {
+  background-image: url("../img/stories/desktop/architecturals.jpg");
+  color: #fff;
+}
+
+@media screen and (min-width: 1550px) {
+  .section-1__left {
+    width: 1110px;
+  }
+  .section-2__right {
+    width: 1110px;
+  }
+  .section-3__left {
+    width: 1110px;
+  }
+  .section-4 {
+    width: 1440px;
+  }
+}
+.beta-invite {
+  background-image: url("../img/shared/desktop/bg-beta.jpg");
+  height: 280px;
+}
+
+.beta-container {
+  width: 1110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: auto;
+  padding-top: 4rem;
+}
+
+.beta-container h2 {
+  width: 400px;
+  color: #fff;
+}
+
+.invite-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 168px;
+}
+
+.toggle-btn {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 32px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #dfdfdf;
+  -webkit-transition: 0.4s;
+  transform: translate(0px, 0px);
+  transition: 0.6s ease transform, 0.6s box-shadow;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 6px;
+  bottom: 4px;
+  background-color: #000;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #000;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(27px);
+  -ms-transform: translateX(27px);
+  transform: translateX(27px);
+  background-color: #fff;
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.pricings {
+  margin: 5rem 0;
+}
+
+.pricing-plans {
+  width: 1110px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1110px;
+  margin-inline: auto;
+}
+
+.plan-price {
+  transition: all ease 0.3s;
+}
+
+.basic,
+.business {
+  width: 350px;
+  height: 407px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.basic .plan-price__text,
+.business .plan-price__text {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.pro {
+  width: 350px;
+  height: 470px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding-top: 1.8rem;
+  position: relative;
+}
+
+.pro .body {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pro .plan-price__text {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 25px;
+}
+
+.pro::before {
+  content: "";
+  background-image: linear-gradient(to top right, rgb(255, 197, 147), rgb(188, 113, 152), rgb(90, 119, 255));
+  width: 350px;
+  height: 6px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.plan-container {
+  width: 270px;
+  height: 370px;
+  padding-top: 3.5rem;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.plan-price__number {
+  font-family: "DM Sans Bold", sans-serif;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 4.17px;
+  text-transform: uppercase;
+}
+
+.table-container {
+  width: 731px;
+  margin-inline: auto;
+  text-align: center;
+  padding: 10rem 0 5rem;
+}
+
+.pricing-table {
+  width: 731px;
+  height: 552px;
+  margin-inline: auto;
+  text-align: left;
+  align-content: center;
+}
+
+.column-start {
+  width: 330px;
+}
+
+.column-heading {
+  width: 140px;
+}
+
+.checkmark {
+  width: 16px;
+  height: 12px;
+}
+
+table {
+  width: 731px;
+}
+
+th,
+td {
+  text-align: center;
+  width: 140px;
+}
+
+th:first-child {
+  text-align: left;
+  width: 230px;
+}
+
+td:first-child {
+  text-align: left;
+  width: 230px;
+}
+
+.main-story {
+  width: 1440px;
+  height: 650px;
+  background-image: url("../img/stories/desktop/moon-of-appalacia.jpg");
+  padding: 7rem 7.5rem;
+}
+.main-story__content {
+  color: #fff;
+  width: 387px;
+  height: 406px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.last-feature {
+  font-size: 12px;
+  font-family: "DM Sans Bold", sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.main-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 184px;
 }
 
 .grid-1 {
@@ -510,17 +922,50 @@ footer {
   background-image: url("../img/stories/desktop/architecturals.jpg");
 }
 
-@media screen and (min-width: 1550px) {
-  .section-1__left {
-    width: 1110px;
-  }
-  .section-2__right {
-    width: 1110px;
-  }
-  .section-3__left {
-    width: 1110px;
-  }
-  .section-4 {
-    width: 1440px;
-  }
+.grid-5 {
+  background-image: url("../img/stories/desktop/world-tour.jpg");
+}
+
+.grid-6 {
+  background-image: url("../img/stories/desktop/unforeseen-corners.jpg");
+}
+
+.grid-7 {
+  background-image: url("../img/stories/desktop/king-on-africa.jpg");
+}
+
+.grid-8 {
+  background-image: url("../img/stories/desktop/trip-to-nowhere.jpg");
+}
+
+.grid-9 {
+  background-image: url("../img/stories/desktop/rage-of-the-sea.jpg");
+}
+
+.grid-10 {
+  background-image: url("../img/stories/desktop/running-free.jpg");
+}
+
+.grid-11 {
+  background-image: url("../img/stories/desktop/behind-the-waves.jpg");
+}
+
+.grid-12 {
+  background-image: url("../img/stories/desktop/calm-waters.jpg");
+}
+
+.grid-13 {
+  background-image: url("../img/stories/desktop/milky-way.jpg");
+}
+
+.grid-14 {
+  background-image: url("../img/stories/desktop/dark-forest.jpg");
+}
+
+.grid-15 {
+  background-image: url("../img/stories/desktop/somwarpet.jpg");
+}
+
+.grid-16 {
+  background-image: url("../img/stories/desktop/land-of-dreams.jpg");
 }

@@ -1,0 +1,31 @@
+.invite {
+  background-image: url('../img/shared/desktop/bg-beta.jpg');
+
+  height: 280px;
+}
+
+.invite-container {
+  width: 1110px;
+
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  margin-inline: auto;
+
+  padding-top: 4rem;
+}
+
+.invite-container h2 {
+  width: 400px;
+
+  color: $clr-primary-100;
+}
+
+.invite-btn {
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  width: 168px;
+}

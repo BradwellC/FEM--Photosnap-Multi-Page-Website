@@ -1,13 +1,3 @@
-@import './base';
-@import './variables';
-@import './resets';
-@import './partials';
-
-@import './generic';
-
-@import './layouts';
-@import './buttons';
-
 .section-1 {
   width: 100%;
   height: 650px;
@@ -19,7 +9,7 @@
   width: 610px;
   height: 100%;
 
-  background-color: black;
+  background-color: $clr-primary-300;
 
   display: flex;
   align-items: center;
@@ -30,15 +20,13 @@
 
 .section-1__left::before {
   content: '';
-
+  background-image: $clr-gradient-1;
   position: absolute;
   width: 6px;
   height: 304px;
 
   top: 27%;
   left: 0;
-
-  background-image: var(--clr-gradient-1);
 }
 
 .section-1__content {
@@ -52,15 +40,15 @@
 }
 
 .section-1__left .h1 {
-  color: var(--clr-primary-100);
+  color: $clr-primary-100;
 }
 
 .section-1__left .body {
-  color: var(--clr-primary-100);
+  color: $clr-primary-100;
 }
 
 .section-1__right img {
-  content: url('../img/home/desktop/create-and-share.jpg');
+  // content: url('../img/home/desktop/create-and-share.jpg');
 
   width: 830px;
   height: 650px;
@@ -75,10 +63,11 @@
   display: flex;
 }
 
-.section-2__left {
-  content: url('../img/home/desktop/beautiful-stories.jpg');
+.section-2__left img {
+  // content: url('../img/home/desktop/beautiful-stories.jpg');
 
   width: 830px;
+  height: 650px;
 }
 
 .section-2__right {
@@ -129,7 +118,7 @@
 }
 
 .section-3__right img {
-  content: url('../img/home/desktop/designed-for-everyone.jpg');
+  // content: url('../img/home/desktop/designed-for-everyone.jpg');
 
   width: 830px;
   height: 650px;
@@ -137,20 +126,28 @@
 
 // Section 4
 
-.grid-1 {
+.story-1 {
   background-image: url('../img/stories/desktop/mountains.jpg');
+
+  color: $clr-primary-100;
 }
 
-.grid-2 {
+.story-2 {
   background-image: url('../img/stories/desktop/cityscapes.jpg');
+
+  color: $clr-primary-100;
 }
 
-.grid-3 {
+.story-3 {
   background-image: url('../img/stories/desktop/18-days-voyage.jpg');
+
+  color: $clr-primary-100;
 }
 
-.grid-4 {
+.story-4 {
   background-image: url('../img/stories/desktop/architecturals.jpg');
+
+  color: $clr-primary-100;
 }
 
 @media screen and (min-width: 1550px) {

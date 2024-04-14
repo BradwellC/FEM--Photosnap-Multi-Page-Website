@@ -1,76 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Photosnap Website Challenge</title>
-</head>
-<body>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
 
-  Stories
-  Features
-  Pricing
+    <title>Frontend Mentor | Photosnap Website Challenge</title>
 
-  Get an invite
+    <link rel="stylesheet" href="../public/css/main.css" />
+  </head>
+  <body>
+    <header>
+      <img src="../public/img/shared/desktop/logo.svg" alt="Photosnap Logo" />
 
-  Pricing
+      <nav class="navbar">
+        <ul>
+          <li><a href="./pages/stories.html">Stories</a></li>
+          <li><a href="./pages/features.html">Features</a></li>
+          <li><a href="./pages/pricing.html">Pricing</a></li>
+        </ul>
+      </nav>
 
-  Create a your stories, Photosnap is a platform for photographers and visual storytellers. 
-  It’s the simple way to create and share your photos.
+      <a href="./pages/pricing.html" class="btn btn-primary">Get an invite</a>
+    </header>
 
-  Monthly
-  Yearly
+    <main>
+      <section class="main-heading">
+        <div class="main-heading__left">
+          <div class="main-heading__content">
+            <h2 class="h1">Pricing</h2>
+            <p class="body">
+              Create a your stories, Photosnap is a platform for photographers
+              and visual storytellers. It’s the simple way to create and share
+              your photos.
+            </p>
+          </div>
+        </div>
 
-  Basic
-  Includes basic usage of our platform. Recommended for new and aspiring photographers.
-  $19.00 per month
-  $190.00 per year
-  Pick Plan
+        <div class="main-heading__right">
+          <picture>
+            <source
+              media="(max-width:650px)"
+              srcset="../public/img/pricing/tablet/hero.jpg.jpg"
+            />
+            <source
+              media="(max-width:465px)"
+              srcset="../public/img/pricing/mobile/hero.jpg.jpg"
+            />
+            <img src="../public/img/pricing/desktop/hero.jpg" alt="Flowers" />
+          </picture>
+        </div>
+      </section>
 
-  Pro
-  More advanced features available. Recommended for photography veterans and professionals.
-  $39.00 per month
-  $390.00 per year
-  Pick Plan
+      <section class="pricings">
+        <div class="pricing-plans">
+          <div class="toggle-btn">
+            <span style="margin: 0.8em">Monthly</span>
+            <label class="switch">
+              <input type="checkbox" id="checkbox" onclick="check()" ; />
+              <span class="slider round"></span>
+            </label>
+            <span style="margin: 0.8em">Yearly</span>
+          </div>
 
-  Business
-  Additional features available such as more detailed metrics. Recommended for business owners.
-  $99.00 per month
-  $990.00 per year
-  Pick Plan
+          <div class="plans">
+            <div class="plan basic">
+              <div class="plan-container">
+                <h4 class="h2">Basic</h4>
+                <p class="body">
+                  Includes basic usage of our platform. Recommended for new and
+                  aspiring photographers.
+                </p>
+                <div class="plan-price monthly">
+                  <p class="plan-price__number">$19.00</p>
+                  <p class="plan-price__text">per month</p>
+                </div>
+                <div class="plan-price yearly">
+                  <p class="plan-price__number">$190.00</p>
+                  <p class="plan-price__text">per year</p>
+                </div>
+                <button class="btn btn-black">pick plan</button>
+              </div>
+            </div>
 
-  Compare
+            <div class="plan pro">
+              <div class="plan-container">
+                <h4 class="h2">Pro</h4>
+                <p class="body">
+                  More advanced features available. Recommended for photography
+                  veterans and professionals.
+                </p>
+                <div class="plan-price monthly">
+                  <p class="plan-price__number">$39.00</p>
+                  <p class="plan-price__text">per month</p>
+                </div>
+                <div class="plan-price yearly">
+                  <p class="plan-price__number">$390.00</p>
+                  <p class="plan-price__text">per year</p>
+                </div>
+                <button class="btn btn-white">pick plan</button>
+              </div>
+            </div>
 
-  The Features
+            <div class="plan business">
+              <div class="plan-container">
+                <h4 class="h2">Business</h4>
+                <p class="body">
+                  Additional features available such as more detailed metrics.
+                  Recommended for business owners.
+                </p>
+                <div class="plan-price monthly">
+                  <p class="plan-price__number">$99.00</p>
+                  <p class="plan-price__text">per month</p>
+                </div>
+                <div class="plan-price yearly">
+                  <p class="plan-price__number">$990.00</p>
+                  <p class="plan-price__text">per year</p>
+                </div>
+                <button class="btn btn-black">Pick Plan</button>
+              </div>
+            </div>
+          </div>
+        </div>
 
-  Basic
-  Pro
-  Business
+        <div class="table-container">
+          <table>
+            <caption class="h1">
+              Compare
+            </caption>
 
-  Unlimited Story Posting
-  Unlimited Photo Upload
-  Embedding Custom Content
-  Customize Metadata
-  Advanced Metrics
-  Photo Downloads
-  Search Engine Indexing
-  Custom Analytics
+            <tr>
+              <th>The Features</th>
+              <th>Basic</th>
+              <th>Pro</th>
+              <th>Business</th>
+            </tr>
 
-  We're in Beta. Get your invite today!
-  
-  Get an invite
+            <tr>
+              <td>UNLIMITED STORY POSTING</td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>UNLIMITED PHOTO UPLOAD</td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>EMBEDDING CUSTOM CONTENT</td>
+              <td>&nbsp;</td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>CUSTOMIZE METADATA</td>
+              <td>&nbsp;</td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>ADVANCED METRICS</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>PHOTO DOWNLOADS</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>SEARCH ENGINE INDEXING</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+            </tr>
+            <tr>
+              <td>CUSTOM ANALYTICS</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>
+                <img src="../public/img/pricing/desktop/check.svg" alt="" />
+              </td>
+            </tr>
+          </table>
+        </div>
+      </section>
 
-  Home
-  Stories
-  Features
-  Pricing
+      <section class="invite">
+        <div class="invite-container">
+          <h2 class="h1">We're in Beta. Get your invite today!</h2>
 
-  Get an invite
+          <div class="invite-btn">
+            <a class="btn-light" href="http://">Get An Invite</a>
+            <img
+              class="arrows"
+              src="../public/img/shared/desktop/arrow.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+    </main>
 
-  Copyright 2019. All Rights Reserved
+    <footer>
+      <div class="footer-container">
+        <div class="footer-left">
+          <div class="img-socials">
+            <img src="../public/img/shared/desktop/logo.svg" alt="" />
 
-</body>
+            <div class="socials">
+              <img src="../public/img/shared/desktop/facebook.svg" alt="" />
+              <img src="../public/img/shared/desktop/youtube.svg" alt="" />
+              <img src="../public/img/shared/desktop/twitter.svg" alt="" />
+              <img src="../public/img/shared/desktop/pinterest.svg" alt="" />
+              <img src="../public/img/shared/desktop/instagram.svg" alt="" />
+            </div>
+          </div>
+          <div class="footer-nav">
+            <ul>
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./stories.html">Stories</a></li>
+              <li><a href="./features.html">Features</a></li>
+              <li><a href="./pricing.html">Pricing</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="link-copyright">
+          <div class="link-btn">
+            <a href="./pricing.html">Get an invite </a>
+            <img
+              class="arrows"
+              src="../public/img/shared/desktop/arrow.svg"
+              alt=""
+            />
+          </div>
+
+          <p class="copyright">Copyright 2019. All Rights Reserved</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../public/js/main.js"></script>
+  </body>
 </html>

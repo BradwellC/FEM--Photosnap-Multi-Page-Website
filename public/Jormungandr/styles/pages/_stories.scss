@@ -1,24 +1,22 @@
-@import './base';
-@import './variables';
-@import './resets';
-@import './partials';
-
-@import './generic';
-
-@import './layouts';
-@import './buttons';
-
 .main-story {
   width: 1440px;
   height: 650px;
 
   background-image: url('../img/stories/desktop/moon-of-appalacia.jpg');
-}
 
-.main-story__content {
-  color: $clr-primary-100;
+  padding: 7rem 7.5rem;
 
-  width: 387px;
+  &__content {
+    color: $clr-primary-100;
+
+    width: 387px;
+    height: 406px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
 }
 
 .last-feature {
@@ -27,6 +25,14 @@
 
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+.main-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 184px;
 }
 
 .grid-1 {

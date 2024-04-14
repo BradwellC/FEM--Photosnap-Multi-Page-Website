@@ -21,13 +21,13 @@
 
       <nav class="navbar">
         <ul>
-          <li><a href="./stories.html">Stories</a></li>
-          <li><a href="./features.html">Features</a></li>
-          <li><a href="./pricing.html">Pricing</a></li>
+          <li><a href="./pages/stories.html">Stories</a></li>
+          <li><a href="./pages/features.html">Features</a></li>
+          <li><a href="./pages/pricing.html">Pricing</a></li>
         </ul>
       </nav>
 
-      <a href="./pricing.html" class="btn btn-primary">Get an invite</a>
+      <a href="#" class="btn btn-primary">Get an invite</a>
     </header>
 
     <main>
@@ -41,10 +41,10 @@
               others.
             </p>
             <div class="section-links">
-              <a class="btn-light" href="./stories.html">Get an Invite </a>
+              <a class="btn-light" href="#">Get an Invite </a>
               <img
                 class="arrows"
-                src="../public/img/shared/desktop/arrow.svg"
+                src="./public/img/shared/desktop/arrow.svg"
                 alt=""
               />
             </div>
@@ -52,13 +52,39 @@
         </div>
 
         <div class="section-1__right">
-          <img alt="Create & Share Image" />
+          <picture>
+            <source
+              media="(max-width:650px)"
+              srcset="../public/img/features/tablet/hero.jpg"
+            />
+            <source
+              media="(max-width:465px)"
+              srcset="../public/img/features/mobile/hero.jpg"
+            />
+            <img
+              src="./public/img/home/desktop/create-and-share.jpg"
+              alt="Flowers"
+            />
+          </picture>
         </div>
       </section>
 
       <section class="section-2">
         <div class="section-2__left">
-          <img alt="" />
+          <picture>
+            <source
+              media="(max-width:650px)"
+              srcset="./public/img/home/tablet/beautiful-stories.jpg"
+            />
+            <source
+              media="(max-width:465px)"
+              srcset="./public/img/home/mobile/beautiful-stories.jpg"
+            />
+            <img
+              src="./public/img/home/desktop/beautiful-stories.jpg"
+              alt="Flowers"
+            />
+          </picture>
         </div>
 
         <div class="section-2__right">
@@ -70,7 +96,7 @@
               Then share your story with everyone.
             </p>
             <div class="section-links">
-              <a class="btn-dark" href="./stories.html">View the stories </a>
+              <a class="btn-dark" href="#">View the stories </a>
               <img
                 class="arrows-dark"
                 src="../public/img/shared/desktop/arrow.svg"
@@ -91,7 +117,7 @@
               brands, businesses you name it.
             </p>
             <div class="section-links">
-              <a class="btn-dark" href="./stories.html">View the stories </a>
+              <a class="btn-dark" href="#">View the stories </a>
               <img
                 class="arrows-dark"
                 src="../public/img/shared/desktop/arrow.svg"
@@ -102,13 +128,26 @@
         </div>
 
         <div class="section-3__right">
-          <img alt="" />
+          <picture>
+            <source
+              media="(max-width:650px)"
+              srcset="./public/img/home/tablet/designed-for-everyone.jpg"
+            />
+            <source
+              media="(max-width:465px)"
+              srcset="./public/img/home/mobile/designed-for-everyone.jpg"
+            />
+            <img
+              src="./public/img/home/desktop/designed-for-everyone.jpg"
+              alt="Flowers"
+            />
+          </picture>
         </div>
       </section>
 
       <section class="section-4">
         <div class="grid-container__4">
-          <a class="grid grid-1" href="">
+          <a class="grid story-1" href="#">
             <div class="grid-content">
               <div class="grid-text">
                 <h3 class="h3">The Mountains</h3>
@@ -125,7 +164,7 @@
             </div>
           </a>
 
-          <a class="grid grid-2" href="">
+          <a class="grid story-2" href="#">
             <div class="grid-content">
               <div class="grid-text">
                 <h3 class="h3">Sunset Cityscapes</h3>
@@ -142,7 +181,7 @@
             </div>
           </a>
 
-          <a class="grid grid-3" href="">
+          <a class="grid story-3" href="#">
             <div class="grid-content">
               <div class="grid-text">
                 <h3 class="h3">18 Days Voyage</h3>
@@ -159,7 +198,7 @@
             </div>
           </a>
 
-          <a class="grid grid-4" href="">
+          <a class="grid story-4" href="#">
             <div class="grid-content">
               <div class="grid-text">
                 <h3 class="h3">Architecturals</h3>

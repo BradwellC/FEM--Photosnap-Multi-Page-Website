@@ -54,3 +54,48 @@
   background-color: #dfdfdf;
   color: $clr-primary-300;
 }
+
+.btn {
+  background-color: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-transform: uppercase;
+  cursor: pointer;
+
+  transition: all ease 0.3s;
+
+  font-size: 12px;
+  font-family: $ff-main;
+
+  letter-spacing: 2px;
+}
+
+.btn-black {
+  background-color: $clr-primary-300;
+  color: $clr-primary-100;
+
+  width: 270px;
+  height: 40px;
+}
+
+.btn-white {
+  background-color: $clr-primary-100;
+  color: $clr-primary-300;
+
+  width: 270px;
+  height: 40px;
+}
+
+.btn-black:hover {
+  background-color: #dfdfdf;
+  color: $clr-primary-300;
+}
+
+.btn-white:hover {
+  background-color: #dfdfdf;
+  color: $clr-primary-300;
+}
