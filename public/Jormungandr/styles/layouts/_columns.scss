@@ -1,21 +1,36 @@
 .three-columns {
   display: flex;
-  flex-direction: row;
 
-  column-gap: 30px;
-  width: 1110px;
+  @include mq('lg') {
+    flex-direction: row;
+    column-gap: 30px;
+    width: 1110px;
 
-  margin: 13rem auto;
+    margin: 13rem auto;
+  }
+
+  @include mq('md') {
+    flex-direction: column;
+    row-gap: 30px;
+    width: 457px;
+  }
 }
 
 .column {
-  width: 350px;
-  height: 218px;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   align-items: center;
   text-align: center;
+
+  @include mq('lg') {
+    width: 350px;
+    height: 218px;
+  }
+
+  @include mq('md') {
+    width: 457px;
+    height: 200px;
+  }
 }

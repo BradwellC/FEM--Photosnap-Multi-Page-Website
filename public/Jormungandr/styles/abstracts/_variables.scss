@@ -20,6 +20,7 @@ $clr-filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7489%)
 
 $breakpoints: (
   sm: 30em,
-  md: 50em,
-  lg: 75em,
+  md: 768px,
+  lg: 90em,
+  xl: 91em,
 );

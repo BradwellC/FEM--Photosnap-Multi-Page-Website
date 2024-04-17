@@ -1,42 +1,50 @@
 .section-1 {
-  width: 100%;
+  width: 1440px;
   height: 650px;
 
   display: flex;
-}
+  margin-inline: auto;
 
-.section-1__left {
-  width: 610px;
-  height: 100%;
+  &__left {
+    height: 100%;
 
-  background-color: $clr-primary-300;
+    background-color: $clr-primary-300;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  position: relative;
-}
+    position: relative;
 
-.section-1__left::before {
-  content: '';
-  background-image: $clr-gradient-1;
-  position: absolute;
-  width: 6px;
-  height: 304px;
+    @include mq('md') {
+      width: 495px;
+    }
 
-  top: 27%;
-  left: 0;
-}
+    @include mq('lg') {
+      width: 610px;
+    }
 
-.section-1__content {
-  width: 387px;
-  height: 304px;
+    &::before {
+      content: '';
+      background-image: $clr-gradient-1;
+      position: absolute;
+      width: 6px;
+      height: 304px;
 
-  display: flex;
-  flex-direction: column;
+      top: 27%;
+      left: 0;
+    }
+  }
 
-  justify-content: space-between;
+  &__content {
+    width: 387px;
+    height: 304px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
 }
 
 .section-1__left .h1 {
@@ -47,11 +55,23 @@
   color: $clr-primary-100;
 }
 
-.section-1__right img {
-  // content: url('../img/home/desktop/create-and-share.jpg');
-
-  width: 830px;
+.section-1__right {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 650px;
+
+  @include mq('md') {
+    width: 273px;
+
+    background-image: url('/public/img/home/tablet/create-and-share.jpg');
+  }
+
+  @include mq('lg') {
+    background-image: url('/public/img/home/desktop/create-and-share.jpg');
+
+    width: 830px;
+  }
 }
 
 /* Section 1 END */
@@ -61,32 +81,46 @@
   height: 650px;
 
   display: flex;
-}
 
-.section-2__left img {
-  // content: url('../img/home/desktop/beautiful-stories.jpg');
+  margin-inline: auto;
 
-  width: 830px;
-  height: 650px;
-}
+  &__left {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
 
-.section-2__right {
-  width: 610px;
-  height: 100%;
+    @include mq('md') {
+      width: 273px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+      background-image: url('/public/img/home/tablet/beautiful-stories.jpg');
+    }
 
-.section-2__content {
-  width: 387px;
-  height: 329px;
+    @include mq('lg') {
+      background-image: url('/public/img/home/desktop/beautiful-stories.jpg');
 
-  display: flex;
-  flex-direction: column;
+      width: 830px;
+    }
+  }
 
-  justify-content: space-between;
+  &__right {
+    width: 610px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    width: 387px;
+    height: 329px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
 }
 
 /* Section 2 END */
@@ -96,32 +130,45 @@
   height: 650px;
 
   display: flex;
-}
 
-.section-3__left {
-  width: 610px;
-  height: 100%;
+  &__left {
+    width: 610px;
+    height: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.section-3__content {
-  width: 387px;
-  height: 329px;
+  &__right {
+    // content: url('../img/home/desktop/designed-for-everyone.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
 
-  display: flex;
-  flex-direction: column;
+    @include mq('md') {
+      width: 273px;
 
-  justify-content: space-between;
-}
+      background-image: url('/public/img/home/tablet/designed-for-everyone.jpg');
+    }
 
-.section-3__right img {
-  // content: url('../img/home/desktop/designed-for-everyone.jpg');
+    @include mq('lg') {
+      background-image: url('/public/img/home/desktop/designed-for-everyone.jpg');
 
-  width: 830px;
-  height: 650px;
+      width: 830px;
+    }
+  }
+
+  &__content {
+    width: 387px;
+    height: 329px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+  }
 }
 
 // Section 4
@@ -130,40 +177,34 @@
   background-image: url('../img/stories/desktop/mountains.jpg');
 
   color: $clr-primary-100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .story-2 {
   background-image: url('../img/stories/desktop/cityscapes.jpg');
 
   color: $clr-primary-100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .story-3 {
   background-image: url('../img/stories/desktop/18-days-voyage.jpg');
 
   color: $clr-primary-100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .story-4 {
   background-image: url('../img/stories/desktop/architecturals.jpg');
 
   color: $clr-primary-100;
-}
-
-@media screen and (min-width: 1550px) {
-  .section-1__left {
-    width: 1110px;
-  }
-
-  .section-2__right {
-    width: 1110px;
-  }
-
-  .section-3__left {
-    width: 1110px;
-  }
-
-  .section-4 {
-    width: 1440px;
-  }
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }

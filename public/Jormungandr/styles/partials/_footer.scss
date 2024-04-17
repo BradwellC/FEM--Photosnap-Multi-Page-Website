@@ -1,6 +1,12 @@
 footer {
   width: 100%;
-  height: 250px;
+  @include mq('lg') {
+    height: 250px;
+  }
+
+  @include mq('md') {
+    height: 284px;
+  }
 
   background-color: $clr-primary-300;
   color: $clr-primary-100;
@@ -11,11 +17,21 @@ footer {
   flex-direction: row;
   justify-content: space-between;
 
-  width: 1104px;
-  height: 122px;
-
   margin-inline: auto;
-  padding-top: 4rem;
+
+  @include mq('lg') {
+    width: 1104px;
+    height: 122px;
+
+    padding-top: 4rem;
+  }
+
+  @include mq('md') {
+    width: 689px;
+    height: 156px;
+
+    padding-top: 4rem;
+  }
 }
 
 .footer-left {

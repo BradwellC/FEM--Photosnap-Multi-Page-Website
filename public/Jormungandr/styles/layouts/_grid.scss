@@ -1,10 +1,19 @@
 .grid-container__4 {
-  width: 100%;
+  width: 768px;
   margin-inline: auto;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
   position: relative;
+  gap: 0;
+
+  @include mq('lg') {
+    grid-template-columns: repeat(4, 360px);
+  }
+
+  @include mq('md') {
+    grid-template-columns: repeat(2, 379px);
+    grid-template-rows: repeat(2, 500px);
+  }
 }
 
 .grid-container__full {
@@ -22,13 +31,20 @@
   background-color: none;
   border: none;
 
-  width: 360px;
-  height: 500px;
-
   position: relative;
 
   cursor: pointer;
   transition: all ease 0.2s;
+
+  @include mq('lg') {
+    width: 360px;
+    height: 500px;
+  }
+
+  @include mq('md') {
+    width: 379px;
+    height: 500px;
+  }
 }
 
 .grid::before {

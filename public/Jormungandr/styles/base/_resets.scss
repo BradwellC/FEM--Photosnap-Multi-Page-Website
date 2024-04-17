@@ -1,6 +1,8 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -45,7 +47,7 @@ a:not([class]) {
 img,
 picture {
   max-width: 100%;
-  display: block;
+  // display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -70,14 +72,6 @@ select {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
 }
 
 body {
