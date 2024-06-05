@@ -16,18 +16,26 @@
     <link rel="stylesheet" href="../public/css/main.css" />
   </head>
   <body>
-    <header>
-      <img src="../public/img/shared/desktop/logo.svg" alt="Photosnap Logo" />
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="./index.html">
+          <img src="./public/img/shared/desktop/logo.svg" alt="" />
+        </a>
+        <button class="navbar-toggle">
+          <img src="./public/img/shared/mobile/menu.svg" alt="" />
+          <img src="./public/img/shared/mobile/close.svg" alt="" />
+        </button>
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="./pages/stories.html">Stories</a></li>
-          <li><a href="./pages/features.html">Features</a></li>
-          <li><a href="./pages/pricing.html">Pricing</a></li>
-        </ul>
-      </nav>
+        <div class="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-nav">
+            <li><a class="navbar-link" href="http://">Stories</a></li>
+            <li><a class="navbar-link" href="http://">Features</a></li>
+            <li><a class="navbar-link" href="http://">Pricing</a></li>
+          </ul>
 
-      <a href="#" class="btn btn-primary">Get an invite</a>
+          <button class="btn btn-nav">Get An Invite</button>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -231,17 +239,20 @@
     <footer>
       <div class="footer-container">
         <div class="footer-left">
-          <div class="img-socials">
-            <img src="../public/img/shared/desktop/logo.svg" alt="" />
+          <img
+            class="footer logo"
+            src="../public/img/shared/desktop/logo.svg"
+            alt=""
+          />
 
-            <div class="socials">
-              <img src="../public/img/shared/desktop/facebook.svg" alt="" />
-              <img src="../public/img/shared/desktop/youtube.svg" alt="" />
-              <img src="../public/img/shared/desktop/twitter.svg" alt="" />
-              <img src="../public/img/shared/desktop/pinterest.svg" alt="" />
-              <img src="../public/img/shared/desktop/instagram.svg" alt="" />
-            </div>
+          <div class="socials">
+            <img src="../public/img/shared/desktop/facebook.svg" alt="" />
+            <img src="../public/img/shared/desktop/youtube.svg" alt="" />
+            <img src="../public/img/shared/desktop/twitter.svg" alt="" />
+            <img src="../public/img/shared/desktop/pinterest.svg" alt="" />
+            <img src="../public/img/shared/desktop/instagram.svg" alt="" />
           </div>
+
           <div class="footer-nav">
             <ul>
               <li><a href="./index.html">Home</a></li>
@@ -265,5 +276,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./public/js/scripts.js"></script>
   </body>
 </html>

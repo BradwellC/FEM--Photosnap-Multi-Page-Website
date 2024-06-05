@@ -1,19 +1,6 @@
 .grid-container__4 {
-  width: 768px;
-  margin-inline: auto;
-
   display: grid;
   position: relative;
-  gap: 0;
-
-  @include mq('lg') {
-    grid-template-columns: repeat(4, 360px);
-  }
-
-  @include mq('md') {
-    grid-template-columns: repeat(2, 379px);
-    grid-template-rows: repeat(2, 500px);
-  }
 }
 
 .grid-container__full {
@@ -21,8 +8,6 @@
   margin-inline: auto;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
 
   position: relative;
 }
@@ -36,15 +21,10 @@
   cursor: pointer;
   transition: all ease 0.2s;
 
-  @include mq('lg') {
-    width: 360px;
-    height: 500px;
-  }
-
-  @include mq('md') {
-    width: 379px;
-    height: 500px;
-  }
+  color: $clr-primary-100;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .grid::before {
@@ -60,6 +40,7 @@
 
 .grid:hover {
   transform: translateY(-25px);
+  z-index: 10;
 }
 
 .grid:hover:after {
@@ -68,11 +49,81 @@
 
   background-image: $clr-gradient-1;
   height: 6px;
-  width: 360px;
+  width: 100%;
 
   bottom: 0;
   left: 0;
   z-index: 100;
+}
+
+@media screen and (min-width: 375px) {
+  .grid-container__4 {
+    width: 375px;
+    height: 1500px;
+    grid-template-columns: 375px;
+    grid-template-rows: repeat(4, 375px);
+  }
+
+  .grid-container__full {
+    width: 375px;
+    grid-template-columns: 375px;
+    grid-template-rows: repeat(4, 375px);
+  }
+
+  .grid {
+    width: 375px;
+    height: 375px;
+  }
+
+  .grid:hover:after {
+    width: 375px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid-container__4 {
+    width: 768px;
+    height: 1000px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 500px);
+  }
+
+  .grid-container__full {
+    width: 768px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(8, 500px);
+  }
+
+  .grid {
+    width: 384px;
+    height: 500px;
+  }
+
+  .grid:hover:after {
+    width: 384px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .grid-container__4 {
+    width: 1440px;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grid-container__full {
+    width: 1440px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 500px);
+  }
+
+  .grid {
+    width: 360px;
+    height: 500px;
+  }
+
+  .grid:hover:after {
+    width: 360px;
+  }
 }
 
 .grid-content {

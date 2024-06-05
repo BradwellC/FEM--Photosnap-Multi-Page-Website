@@ -1,15 +1,11 @@
 footer {
-  width: 100%;
-  @include mq('lg') {
-    height: 250px;
-  }
-
-  @include mq('md') {
-    height: 284px;
-  }
-
   background-color: $clr-primary-300;
   color: $clr-primary-100;
+
+  @include mq('sm') {
+    height: 539px;
+    width: 375px;
+  }
 }
 
 .footer-container {
@@ -19,44 +15,13 @@ footer {
 
   margin-inline: auto;
 
-  @include mq('lg') {
-    width: 1104px;
-    height: 122px;
-
-    padding-top: 4rem;
-  }
-
-  @include mq('md') {
-    width: 689px;
-    height: 156px;
-
-    padding-top: 4rem;
-  }
-}
-
-.footer-left {
-  display: flex;
-
-  column-gap: 60px;
-}
-
-.img-socials {
-  display: flex;
-  flex-direction: column;
-
-  height: 122px;
-
-  justify-content: space-between;
-
-  & img {
-    filter: $clr-filter;
-  }
+  position: relative;
 }
 
 .socials {
   display: flex;
   justify-content: space-between;
-  width: 154px;
+  align-items: start;
 
   & img {
     filter: $clr-filter;
@@ -69,14 +34,86 @@ footer {
   }
 }
 
-.footer-nav ul {
-  width: 250px;
-  height: 120px;
+@media screen and (min-width: 375px) {
+  footer {
+  }
 
+  .footer-logo {
+    width: 170px;
+  }
+
+  .footer-container {
+    width: 310px;
+    height: 427px;
+
+    padding-top: 4rem;
+
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    width: 768px;
+    height: 284px;
+  }
+
+  .footer-container {
+    width: 689px;
+    height: 156px;
+
+    padding-top: 4rem;
+  }
+
+  .socials {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    width: 1440px;
+    height: 250px;
+  }
+
+  .socials {
+    width: 154px;
+  }
+}
+
+.footer-left {
   display: flex;
-  flex-direction: column;
 
-  justify-content: space-between;
+  column-gap: 60px;
+  position: relative;
+
+  @include mq('md') {
+    flex-direction: column;
+    height: 156px;
+  }
+}
+
+.footer-nav ul {
+  display: flex;
+
+  @include mq('lg') {
+    width: 250px;
+    height: 120px;
+
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  @include mq('md') {
+    width: 315px;
+    height: 16px;
+
+    flex-direction: row;
+    justify-content: space-between;
+  }
 
   & li a {
     color: $clr-primary-100;
@@ -98,7 +135,7 @@ footer {
   flex-direction: column;
   justify-content: space-between;
 
-  height: 122px;
+  height: 156px;
 }
 
 .link-btn {
@@ -130,4 +167,11 @@ footer {
 
   font-size: 15px;
   font-family: $ff-secondary;
+}
+
+.footer-logo {
+  width: 170px;
+  height: 16px;
+
+  filter: $clr-filter;
 }

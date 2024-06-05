@@ -1,9 +1,27 @@
 .section-1 {
-  width: 1440px;
-  height: 650px;
-
   display: flex;
   margin-inline: auto;
+
+  @include mq('sm') {
+    width: 719px;
+    height: 650px;
+
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  @include mq('md') {
+    width: 768px;
+    height: 650px;
+
+    flex-direction: row;
+    margin-inline: auto;
+  }
+
+  @include mq('lg') {
+    width: 1440px;
+    height: 650px;
+  }
 
   &__left {
     height: 100%;
@@ -16,82 +34,124 @@
 
     position: relative;
 
+    @include mq('sm') {
+      width: 375px;
+      height: 419px;
+    }
+
     @include mq('md') {
       width: 495px;
+      height: 650px;
     }
 
     @include mq('lg') {
       width: 610px;
+      height: 650px;
     }
 
     &::before {
-      content: '';
       background-image: $clr-gradient-1;
       position: absolute;
-      width: 6px;
-      height: 304px;
+      content: '';
 
-      top: 27%;
-      left: 0;
+      @include mq('sm') {
+        width: 128px;
+        height: 6px;
+
+        top: 0;
+        left: 12%;
+      }
+
+      @include mq('md') {
+        width: 6px;
+        height: 304px;
+
+        top: 27%;
+        left: 0;
+      }
+    }
+
+    & .body {
+      color: rgba($clr-primary-100, 0.6);
+    }
+
+    & .h1 {
+      color: $clr-primary-100;
     }
   }
 
   &__content {
-    width: 387px;
-    height: 304px;
+    // width: 387px;
+    // height: 304px;
 
     display: flex;
     flex-direction: column;
 
     justify-content: space-between;
-  }
-}
 
-.section-1__left .h1 {
-  color: $clr-primary-100;
-}
-
-.section-1__left .body {
-  color: $clr-primary-100;
-}
-
-.section-1__right {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 650px;
-
-  @include mq('md') {
-    width: 273px;
-
-    background-image: url('/public/img/home/tablet/create-and-share.jpg');
+    @include mq('sm') {
+      width: 318px;
+      height: 275px;
+    }
   }
 
-  @include mq('lg') {
-    background-image: url('/public/img/home/desktop/create-and-share.jpg');
+  &__right {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
-    width: 830px;
+    @include mq('sm') {
+      background-image: url('/public/img/home/mobile/create-and-share.jpg');
+
+      width: 375px;
+      height: 294px;
+    }
+
+    @include mq('md') {
+      background-image: url('/public/img/home/tablet/create-and-share.jpg');
+
+      width: 273px;
+      height: 650px;
+    }
   }
 }
 
 /* Section 1 END */
 
 .section-2 {
-  width: 100%;
-  height: 650px;
-
   display: flex;
 
   margin-inline: auto;
+
+  @include mq('sm') {
+    width: 375px;
+    height: 690px;
+
+    flex-direction: column;
+  }
+
+  @include mq('md') {
+    width: 768px;
+    height: 600px;
+
+    flex-direction: row;
+  }
 
   &__left {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 650px;
+
+    @include mq('sm') {
+      width: 375px;
+      height: 271px;
+
+      background-image: url('/public/img/home/mobile/beautiful-stories.jpg');
+    }
 
     @include mq('md') {
       width: 273px;
+      height: 600px;
 
       background-image: url('/public/img/home/tablet/beautiful-stories.jpg');
     }
@@ -100,16 +160,24 @@
       background-image: url('/public/img/home/desktop/beautiful-stories.jpg');
 
       width: 830px;
+      height: 600px;
     }
   }
 
   &__right {
-    width: 610px;
-    height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mq('sm') {
+      width: 375px;
+      height: 419px;
+    }
+
+    @include mq('md') {
+      width: 495px;
+      height: 600px;
+    }
   }
 
   &__content {
@@ -120,6 +188,16 @@
     flex-direction: column;
 
     justify-content: space-between;
+
+    @include mq('sm') {
+      width: 318px;
+      height: 275px;
+    }
+
+    @include mq('md') {
+      width: 387px;
+      height: 329px;
+    }
   }
 }
 
@@ -131,24 +209,52 @@
 
   display: flex;
 
-  &__left {
-    width: 610px;
-    height: 100%;
+  @include mq('sm') {
+    width: 375px;
+    height: 690px;
 
+    flex-direction: column-reverse;
+  }
+
+  @include mq('md') {
+    width: 768px;
+    height: 600px;
+
+    flex-direction: row;
+    margin-inline: auto;
+  }
+
+  &__left {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include mq('sm') {
+      width: 375px;
+      height: 419px;
+    }
+
+    @include mq('md') {
+      width: 495px;
+      height: 600px;
+    }
   }
 
   &__right {
-    // content: url('../img/home/desktop/designed-for-everyone.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 650px;
+
+    @include mq('sm') {
+      width: 375px;
+      height: 271px;
+
+      background-image: url('/public/img/home/mobile/designed-for-everyone.jpg');
+    }
 
     @include mq('md') {
       width: 273px;
+      height: 600px;
 
       background-image: url('/public/img/home/tablet/designed-for-everyone.jpg');
     }
@@ -168,43 +274,153 @@
     flex-direction: column;
 
     justify-content: space-between;
+
+    @include mq('sm') {
+      width: 318px;
+      height: 235px;
+    }
+  }
+}
+
+@media screen and (min-width: 1439px) {
+  .section-1 {
+    &__left {
+    }
+
+    &__right {
+      background-image: url('/public/img/home/desktop/create-and-share.jpg');
+
+      width: 830px;
+      height: 650px;
+    }
+  }
+
+  .section-2 {
+    width: 1440px;
+    height: 600px;
+
+    flex-direction: row;
+    margin-inline: auto;
+
+    &__left {
+      width: 830px;
+      height: 600px;
+
+      background-image: url('/public/img/home/desktop/beautiful-stories.jpg');
+    }
+
+    &__right {
+      width: 375px;
+      height: 419px;
+    }
+  }
+
+  .section-3 {
+    width: 1440px;
+    height: 600px;
+
+    flex-direction: row;
+    margin-inline: auto;
+
+    &__left {
+      width: 610px;
+      height: 600px;
+    }
+
+    &__right {
+      width: 830px;
+      height: 600px;
+
+      background-image: url('/public/img/home/desktop/designed-for-everyone.jpg');
+    }
   }
 }
 
 // Section 4
+.section-4 {
+  margin-inline: auto;
+  @include mq('sm') {
+    width: 375px;
+  }
+
+  @include mq('md') {
+    width: 768px;
+  }
+
+  @include mq('lg') {
+    height: 500px;
+    width: 1440px;
+  }
+}
 
 .story-1 {
-  background-image: url('../img/stories/desktop/mountains.jpg');
+  @include mq('sm') {
+    background-image: url('/public/img/stories/mobile/mountains.jpg');
+  }
 
-  color: $clr-primary-100;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include mq('md') {
+    background-image: url('/public/img/stories/desktop/mountains.jpg');
+  }
+
+  @include mq('lg') {
+    background-image: url('../img/stories/desktop/mountains.jpg');
+  }
 }
 
 .story-2 {
-  background-image: url('../img/stories/desktop/cityscapes.jpg');
+  @include mq('sm') {
+    background-image: url('/public/img/stories/mobile/cityscapes.jpg');
+  }
 
-  color: $clr-primary-100;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include mq('md') {
+    background-image: url('/public/img/stories/desktop/cityscapes.jpg');
+  }
+
+  @include mq('lg') {
+    background-image: url('../img/stories/desktop/cityscapes.jpg');
+  }
 }
 
 .story-3 {
-  background-image: url('../img/stories/desktop/18-days-voyage.jpg');
+  @include mq('sm') {
+    background-image: url('/public/img/stories/mobile/18-days-voyage.jpg');
+  }
 
-  color: $clr-primary-100;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include mq('md') {
+    background-image: url('/public/img/stories/desktop/18-days-voyage.jpg');
+  }
+
+  @include mq('lg') {
+    background-image: url('../img/stories/desktop/18-days-voyage.jpg');
+  }
 }
 
 .story-4 {
-  background-image: url('../img/stories/desktop/architecturals.jpg');
+  @include mq('sm') {
+    background-image: url('/public/img/stories/mobile/architecturals.jpg');
+  }
 
-  color: $clr-primary-100;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  @include mq('md') {
+    background-image: url('/public/img/stories/desktop/architecturals.jpg');
+  }
+
+  @include mq('lg') {
+    background-image: url('../img/stories/desktop/architecturals.jpg');
+  }
+}
+
+.section-5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include mq('md') {
+    height: 1000px;
+    width: 768px;
+  }
+
+  @include mq('lg') {
+    height: 500px;
+    width: 1440px;
+  }
 }

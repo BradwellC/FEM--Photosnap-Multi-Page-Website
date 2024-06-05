@@ -1,0 +1,43 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+thead {
+  border-bottom: 1px solid #000;
+
+  font-size: 12px;
+  font-family: $ff-main;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+tr {
+  border-bottom: 1px solid #dfdfdf;
+
+  padding: 3rem 0;
+}
+
+tr td:nth-child(1) {
+  font-size: 12px;
+  font-family: $ff-main;
+
+  letter-spacing: 2px;
+}
+
+td img {
+  width: 16px;
+  height: 12px;
+}
+
+@media screen and (min-width: 375px) {
+  table {
+    width: 318px;
+  }
+
+  tr td:nth-child(1) {
+    // display: none;
+  }
+}

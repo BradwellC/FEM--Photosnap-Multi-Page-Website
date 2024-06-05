@@ -6,6 +6,12 @@
   letter-spacing: 4.17px;
 
   text-transform: uppercase;
+
+  @include mq('sm') {
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: 3.33px;
+  }
 }
 
 .h2 {
@@ -32,8 +38,9 @@
 
 .body {
   font-size: 15px;
-
   line-height: 25px;
+
+  color: rgba($color: #000000, $alpha: 0.6);
 }
 
 .arrows {

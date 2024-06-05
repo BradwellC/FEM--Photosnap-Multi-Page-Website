@@ -33,9 +33,7 @@ html:focus-within {
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
@@ -76,8 +74,9 @@ select {
 
 body {
   font-family: $ff-secondary;
-  width: 100%;
   max-width: 1440px;
+  width: 100%;
+  min-height: 100%;
   margin-inline: auto;
 }
 

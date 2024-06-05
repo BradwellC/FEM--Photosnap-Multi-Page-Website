@@ -99,3 +99,21 @@
   background-color: #dfdfdf;
   color: $clr-primary-300;
 }
+
+.btn-nav {
+  background-color: $clr-primary-300;
+  color: $clr-primary-100;
+
+  width: 158px;
+  height: 40px;
+
+  font-size: 12px;
+  letter-spacing: 2px;
+
+  transition: all ease 0.3s;
+}
+
+.btn-nav:hover {
+  background-color: #dfdfdf;
+  color: $clr-primary-300;
+}

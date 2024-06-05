@@ -16,18 +16,26 @@
     <link rel="stylesheet" href="../public/css/main.css" />
   </head>
   <body>
-    <header>
-      <img src="../public/img/shared/desktop/logo.svg" alt="Photosnap Logo" />
+    <header class="navbar">
+      <div class="navbar-container">
+        <a href="./index.html">
+          <img src="../public/img/shared/desktop/logo.svg" alt="" />
+        </a>
+        <button class="navbar-toggle">
+          <img src="./public/img/shared/mobile/menu.svg" alt="" />
+          <img src="./public/img/shared/mobile/close.svg" alt="" />
+        </button>
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="./pages/stories.html">Stories</a></li>
-          <li><a href="./pages/features.html">Features</a></li>
-          <li><a href="./pages/pricing.html">Pricing</a></li>
-        </ul>
-      </nav>
+        <div class="navbar-menu" aria-labelledby="navbar-toggle">
+          <ul class="navbar-nav">
+            <li><a class="navbar-link" href="http://">Stories</a></li>
+            <li><a class="navbar-link" href="http://">Features</a></li>
+            <li><a class="navbar-link" href="http://">Pricing</a></li>
+          </ul>
 
-      <a href="./pages/pricing.html" class="btn btn-primary">Get an invite</a>
+          <button class="btn btn-nav">Get An Invite</button>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -130,94 +138,96 @@
         </div>
 
         <div class="table-container">
-          <table>
+          <table class="pricing-table">
             <caption class="h1">
               Compare
             </caption>
 
-            <tr>
+            <thead>
               <th>The Features</th>
               <th>Basic</th>
               <th>Pro</th>
               <th>Business</th>
-            </tr>
+            </thead>
 
-            <tr>
-              <td>UNLIMITED STORY POSTING</td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>UNLIMITED PHOTO UPLOAD</td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>EMBEDDING CUSTOM CONTENT</td>
-              <td>&nbsp;</td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>CUSTOMIZE METADATA</td>
-              <td>&nbsp;</td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>ADVANCED METRICS</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>PHOTO DOWNLOADS</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>SEARCH ENGINE INDEXING</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-            </tr>
-            <tr>
-              <td>CUSTOM ANALYTICS</td>
-              <td>&nbsp;</td>
-              <td>&nbsp;</td>
-              <td>
-                <img src="../public/img/pricing/desktop/check.svg" alt="" />
-              </td>
-            </tr>
+            <tbody>
+              <tr data-label="The Features">
+                <td class="title">UNLIMITED STORY POSTING</td>
+                <td data-label="Basic">
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+                <td data-label="Pro">
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+                <td data-label="Business">
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+              </tr>
+              <tr data-label="The Features">
+                <td class="title">UNLIMITED PHOTO UPLOAD</td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+              </tr>
+              <tr data-label="The Features">
+                <td>EMBEDDING CUSTOM CONTENT</td>
+                <td>&nbsp;</td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+              </tr>
+              <tr data-label="The Features">
+                <td class="title">CUSTOMIZE METADATA</td>
+                <td>&nbsp;</td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+              </tr>
+              <tr data-label="The Features">
+                <td class="title">ADVANCED METRICS</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+              </tr>
+              <tr data-label="The Features">
+                <td class="title">PHOTO DOWNLOADS</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+              </tr>
+              <tr data-label="The Features">
+                <td class="title">SEARCH ENGINE INDEXING</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+              </tr>
+              <tr data-label="The Features">
+                <td class="title">CUSTOM ANALYTICS</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>
+                  <img src="../public/img/pricing/desktop/check.svg" alt="" />
+                </td>
+              </tr>
+            </tbody>
           </table>
         </div>
       </section>
@@ -241,17 +251,20 @@
     <footer>
       <div class="footer-container">
         <div class="footer-left">
-          <div class="img-socials">
-            <img src="../public/img/shared/desktop/logo.svg" alt="" />
+          <img
+            class="footer logo"
+            src="../public/img/shared/desktop/logo.svg"
+            alt=""
+          />
 
-            <div class="socials">
-              <img src="../public/img/shared/desktop/facebook.svg" alt="" />
-              <img src="../public/img/shared/desktop/youtube.svg" alt="" />
-              <img src="../public/img/shared/desktop/twitter.svg" alt="" />
-              <img src="../public/img/shared/desktop/pinterest.svg" alt="" />
-              <img src="../public/img/shared/desktop/instagram.svg" alt="" />
-            </div>
+          <div class="socials">
+            <img src="../public/img/shared/desktop/facebook.svg" alt="" />
+            <img src="../public/img/shared/desktop/youtube.svg" alt="" />
+            <img src="../public/img/shared/desktop/twitter.svg" alt="" />
+            <img src="../public/img/shared/desktop/pinterest.svg" alt="" />
+            <img src="../public/img/shared/desktop/instagram.svg" alt="" />
           </div>
+
           <div class="footer-nav">
             <ul>
               <li><a href="./index.html">Home</a></li>
@@ -276,6 +289,6 @@
       </div>
     </footer>
 
-    <script src="../public/js/main.js"></script>
+    <script src="../public/js/scripts.js"></script>
   </body>
 </html>
